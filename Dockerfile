@@ -3,10 +3,10 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["EnvisionBot/EnvisionBot.csproj", "EnvisionBot/"]
+COPY ["src/EnvisionBot/EnvisionBot.csproj", "EnvisionBot/"]
 RUN dotnet restore "EnvisionBot/EnvisionBot.csproj"
 COPY . .
-WORKDIR "/src/EnvisionBot"
+WORKDIR "/src/src/EnvisionBot"
 RUN dotnet build "EnvisionBot.csproj" -c Release -o /app/build
 
 FROM build AS publish
