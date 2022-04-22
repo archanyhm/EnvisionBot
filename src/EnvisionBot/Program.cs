@@ -1,17 +1,10 @@
-﻿using System.Drawing;
-using EnvisionBot.Services;
+﻿using EnvisionBot.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Remora.Discord.API.Abstractions.Gateway.Commands;
-using Remora.Discord.API.Abstractions.Gateway.Events;
-using Remora.Discord.API.Abstractions.Rest;
-using Remora.Discord.API.Objects;
 using Remora.Discord.Gateway;
-using Remora.Discord.Gateway.Extensions;
-using Remora.Discord.Gateway.Responders;
 using Remora.Discord.Hosting.Extensions;
-using Remora.Results;
 using TwitterSharp.Client;
 
 namespace EnvisionBot;
