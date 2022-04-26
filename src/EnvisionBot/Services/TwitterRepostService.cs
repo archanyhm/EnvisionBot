@@ -34,7 +34,7 @@ public class TwitterRepostService : BackgroundService
         await _twitterClient.AddTweetStreamAsync(new StreamRequest(Expression.Author("archillect")));
         await _twitterClient.NextTweetStreamAsync((tweet) =>
         {
-            bool hasAttachment = tweet.Attachments.Media == null || tweet.Attachments.Media.Length < 1;
+            bool hasAttachment = !(tweet.Attachments.Media == null || tweet.Attachments.Media.Length < 1);
 
             if (hasAttachment)
             {
